@@ -4,12 +4,12 @@ import { getAuth } from "firebase/auth"
 import { getStorage } from "firebase/storage"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD8IiecQk3dqiVPsxVspkS0gCF3F7eeJ70",
-  authDomain: "thedojo-ac438.firebaseapp.com",
-  projectId: "thedojo-ac438",
-  storageBucket: "thedojo-ac438.appspot.com",
-  messagingSenderId: "503128874861",
-  appId: "1:503128874861:web:cd25d69a4fa6265ba48464",
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 }
 
 // init Firebase
