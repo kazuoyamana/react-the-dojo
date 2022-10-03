@@ -20,9 +20,11 @@ export const Dashboard = () => {
       // 下記のようにdocをそのまま返しても true を返しても同じ
       return doc
     } else if (currentFilter === "mine") {
+      // map()で[uid, uid, uid]のリストを作り、includes()でtrue/falseを受け取る
       return doc.assignedUsersList.map((u) => u.id).includes(user.uid)
     } else {
-      return doc.category === currentFilter // これも結局、式の結果をtrue/falseで返してるだけ
+      // これも結局、式の結果をtrue/falseで返してるだけ
+      return doc.category === currentFilter
     }
   })
 
